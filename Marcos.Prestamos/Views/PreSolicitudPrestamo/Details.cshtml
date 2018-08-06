@@ -1,0 +1,84 @@
+@model Marcos.Prestamos.Models.PreSolicitudPrestamo
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PreSolicitudPrestamo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ClaveSolicitud)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ClaveSolicitud)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaSolicitud)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaSolicitud)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MontoSolicitado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MontoSolicitado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoArticulo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CodigoArticulo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Kilates)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Kilates)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Gramos)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Gramos)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MontoAprobado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MontoAprobado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CliCliente)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CliCliente.ClaveCliente)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpEmpleado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmpEmpleado.ClaveEmpleado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PreCatArticulo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PreCatArticulo.Valor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PreCatEstado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PreCatEstado.Valor)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,69 @@
+@model Marcos.Prestamos.Models.CliCliente
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>CliCliente</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="ClaveCliente" class="control-label"></label>
+                <input asp-for="ClaveCliente" class="form-control" />
+                <span asp-validation-for="ClaveCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaAlta" class="control-label"></label>
+                <input asp-for="FechaAlta" class="form-control" />
+                <span asp-validation-for="FechaAlta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FKComCatSucursal" class="control-label"></label>
+                <select asp-for="FKComCatSucursal" class="form-control" asp-items="ViewBag.FKComCatSucursal"></select>
+                <span asp-validation-for="FKComCatSucursal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FKComPersona" class="control-label"></label>
+                <select asp-for="FKComPersona" class="form-control" asp-items="ViewBag.FKComPersona"></select>
+                <span asp-validation-for="FKComPersona" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FKEmpEmpleado" class="control-label"></label>
+                <select asp-for="FKEmpEmpleado" class="form-control" asp-items="ViewBag.FKEmpEmpleado"></select>
+                <span asp-validation-for="FKEmpEmpleado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FKCliCatEstadoTemporal" class="control-label"></label>
+                <select asp-for="FKCliCatEstadoTemporal" class="form-control" asp-items="ViewBag.FKCliCatEstadoTemporal"></select>
+                <span asp-validation-for="FKCliCatEstadoTemporal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FKCliCatEstadoFinal" class="control-label"></label>
+                <select asp-for="FKCliCatEstadoFinal" class="form-control" asp-items="ViewBag.FKCliCatEstadoFinal"></select>
+                <span asp-validation-for="FKCliCatEstadoFinal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaBaja" class="control-label"></label>
+                <input asp-for="FechaBaja" class="form-control" />
+                <span asp-validation-for="FechaBaja" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

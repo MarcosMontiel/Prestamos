@@ -1,0 +1,71 @@
+@model IEnumerable<Marcos.Prestamos.Models.PrePlantillaPagos>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.NoPago)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PagoRequerido)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FechaRequeridaPago)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PagoRealizado)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FechaPago)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PreCatEstadoPago)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PreSolicitudPrestamo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoPago)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PagoRequerido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaRequeridaPago)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PagoRealizado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaPago)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PreCatEstadoPago.Valor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PreSolicitudPrestamo.ClaveSolicitud)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,84 @@
+@model Marcos.Prestamos.Models.PreSolicitudPrestamo
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>PreSolicitudPrestamo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="ClaveSolicitud" class="control-label"></label>
+                <input asp-for="ClaveSolicitud" class="form-control" />
+                <span asp-validation-for="ClaveSolicitud" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaSolicitud" class="control-label"></label>
+                <input asp-for="FechaSolicitud" class="form-control" />
+                <span asp-validation-for="FechaSolicitud" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MontoSolicitado" class="control-label"></label>
+                <input asp-for="MontoSolicitado" class="form-control" />
+                <span asp-validation-for="MontoSolicitado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CodigoArticulo" class="control-label"></label>
+                <input asp-for="CodigoArticulo" class="form-control" />
+                <span asp-validation-for="CodigoArticulo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Kilates" class="control-label"></label>
+                <input asp-for="Kilates" class="form-control" />
+                <span asp-validation-for="Kilates" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gramos" class="control-label"></label>
+                <input asp-for="Gramos" class="form-control" />
+                <span asp-validation-for="Gramos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MontoAprobado" class="control-label"></label>
+                <input asp-for="MontoAprobado" class="form-control" />
+                <span asp-validation-for="MontoAprobado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FKCliCliente" class="control-label"></label>
+                <select asp-for="FKCliCliente" class="form-control" asp-items="ViewBag.FKCliCliente"></select>
+                <span asp-validation-for="FKCliCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FKEmpEmpleado" class="control-label"></label>
+                <select asp-for="FKEmpEmpleado" class="form-control" asp-items="ViewBag.FKEmpEmpleado"></select>
+                <span asp-validation-for="FKEmpEmpleado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FKPreCatArticulo" class="control-label"></label>
+                <select asp-for="FKPreCatArticulo" class="form-control" asp-items="ViewBag.FKPreCatArticulo"></select>
+                <span asp-validation-for="FKPreCatArticulo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FKPreCatEstado" class="control-label"></label>
+                <select asp-for="FKPreCatEstado" class="form-control" asp-items="ViewBag.FKPreCatEstado"></select>
+                <span asp-validation-for="FKPreCatEstado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

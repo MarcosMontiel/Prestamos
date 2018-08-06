@@ -1,0 +1,60 @@
+@model Marcos.Prestamos.Models.PrePlantillaPagos
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PrePlantillaPagos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NoPago)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NoPago)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PagoRequerido)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PagoRequerido)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaRequeridaPago)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaRequeridaPago)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PagoRealizado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PagoRealizado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaPago)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaPago)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PreCatEstadoPago)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PreCatEstadoPago.Valor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PreSolicitudPrestamo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PreSolicitudPrestamo.ClaveSolicitud)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

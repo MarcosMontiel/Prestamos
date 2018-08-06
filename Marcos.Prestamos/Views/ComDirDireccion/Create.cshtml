@@ -1,0 +1,64 @@
+@model Marcos.Prestamos.Models.ComDirDireccion
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>ComDirDireccion</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Calle" class="control-label"></label>
+                <input asp-for="Calle" class="form-control" />
+                <span asp-validation-for="Calle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumExt" class="control-label"></label>
+                <input asp-for="NumExt" class="form-control" />
+                <span asp-validation-for="NumExt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumInt" class="control-label"></label>
+                <input asp-for="NumInt" class="form-control" />
+                <span asp-validation-for="NumInt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CP" class="control-label"></label>
+                <input asp-for="CP" class="form-control" />
+                <span asp-validation-for="CP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FKComPersona" class="control-label"></label>
+                <select asp-for="FKComPersona" class ="form-control" asp-items="ViewBag.FKComPersona"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="FKComDirCatEstado" class="control-label"></label>
+                <select asp-for="FKComDirCatEstado" class ="form-control" asp-items="ViewBag.FKComDirCatEstado"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="FKComDirCatMunicipio" class="control-label"></label>
+                <select asp-for="FKComDirCatMunicipio" class ="form-control" asp-items="ViewBag.FKComDirCatMunicipio"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="FKComDirCatColonia" class="control-label"></label>
+                <select asp-for="FKComDirCatColonia" class ="form-control" asp-items="ViewBag.FKComDirCatColonia"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

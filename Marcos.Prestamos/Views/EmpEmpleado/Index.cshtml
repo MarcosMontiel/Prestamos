@@ -1,0 +1,89 @@
+@model IEnumerable<Marcos.Prestamos.Models.EmpEmpleado>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ClaveEmpleado)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FechaAlta)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Rfc)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NoImms)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FechaBaja)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ComCatSucursal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ComPersona)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpCatEstadoFinal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpCatEstadoTemporal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpCatPuesto)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClaveEmpleado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaAlta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rfc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoImms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaBaja)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ComCatSucursal.Valor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ComPersona.AMaterno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpCatEstadoFinal.Valor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpCatEstadoTemporal.Valor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpCatPuesto.Valor)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

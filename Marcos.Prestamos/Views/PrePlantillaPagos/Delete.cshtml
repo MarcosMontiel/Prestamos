@@ -1,0 +1,63 @@
+@model Marcos.Prestamos.Models.PrePlantillaPagos
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PrePlantillaPagos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NoPago)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NoPago)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PagoRequerido)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PagoRequerido)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaRequeridaPago)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaRequeridaPago)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PagoRealizado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PagoRealizado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaPago)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaPago)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PreCatEstadoPago)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PreCatEstadoPago.Valor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PreSolicitudPrestamo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PreSolicitudPrestamo.ClaveSolicitud)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

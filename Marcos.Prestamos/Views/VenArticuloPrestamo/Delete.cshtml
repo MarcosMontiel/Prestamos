@@ -1,0 +1,57 @@
+@model Marcos.Prestamos.Models.VenArticuloPrestamo
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>VenArticuloPrestamo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PrecioArticulo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrecioArticulo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaVenta)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaVenta)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpEmpleado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmpEmpleado.ClaveEmpleado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PreSolicitudPrestamo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PreSolicitudPrestamo.ClaveSolicitud)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VenCatEstadoVenta)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VenCatEstadoVenta.Valor)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

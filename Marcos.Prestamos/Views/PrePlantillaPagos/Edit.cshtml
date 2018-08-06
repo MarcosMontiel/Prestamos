@@ -1,0 +1,64 @@
+@model Marcos.Prestamos.Models.PrePlantillaPagos
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>PrePlantillaPagos</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="NoPago" class="control-label"></label>
+                <input asp-for="NoPago" class="form-control" />
+                <span asp-validation-for="NoPago" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PagoRequerido" class="control-label"></label>
+                <input asp-for="PagoRequerido" class="form-control" />
+                <span asp-validation-for="PagoRequerido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaRequeridaPago" class="control-label"></label>
+                <input asp-for="FechaRequeridaPago" class="form-control" />
+                <span asp-validation-for="FechaRequeridaPago" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PagoRealizado" class="control-label"></label>
+                <input asp-for="PagoRealizado" class="form-control" />
+                <span asp-validation-for="PagoRealizado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaPago" class="control-label"></label>
+                <input asp-for="FechaPago" class="form-control" />
+                <span asp-validation-for="FechaPago" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FKPreSolicitudPrestamo" class="control-label"></label>
+                <select asp-for="FKPreSolicitudPrestamo" class="form-control" asp-items="ViewBag.FKPreSolicitudPrestamo"></select>
+                <span asp-validation-for="FKPreSolicitudPrestamo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FKPreCatEstadoPago" class="control-label"></label>
+                <select asp-for="FKPreCatEstadoPago" class="form-control" asp-items="ViewBag.FKPreCatEstadoPago"></select>
+                <span asp-validation-for="FKPreCatEstadoPago" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

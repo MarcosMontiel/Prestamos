@@ -1,0 +1,66 @@
+@model Marcos.Prestamos.Models.CliCliente
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CliCliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ClaveCliente)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ClaveCliente)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaAlta)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaAlta)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaBaja)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaBaja)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CliCatEstadoFinal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CliCatEstadoFinal.Valor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CliCatEstadoTemporal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CliCatEstadoTemporal.Valor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ComCatSucursal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ComCatSucursal.Valor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ComPersona)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ComPersona.AMaterno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpEmpleado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmpEmpleado.ClaveEmpleado)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

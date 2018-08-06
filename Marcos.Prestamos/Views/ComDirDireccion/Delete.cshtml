@@ -1,0 +1,69 @@
+@model Marcos.Prestamos.Models.ComDirDireccion
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ComDirDireccion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Calle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Calle)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumExt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumExt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumInt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumInt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CP)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CP)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ComDirCatColonia)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ComDirCatColonia.Valor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ComDirCatEstado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ComDirCatEstado.Valor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ComDirCatMunicipio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ComDirCatMunicipio.Valor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ComPersona)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ComPersona.AMaterno)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
