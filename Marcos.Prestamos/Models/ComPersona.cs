@@ -12,6 +12,6 @@ namespace Marcos.Prestamos.Models
 
         [Required]         [MaxLength(50)]         public string APaterno { get; set; }          [Required]         [MaxLength(50)]         public string AMaterno { get; set; }          [Required]         [MaxLength(18)]         public string Curp { get; set; }          [Required]         public DateTime FechaNac { get; set; }
 
-        public int FKComCatGenero { get; set; }         [ForeignKey("FKComCatSexo")]         public ComCatGenero ComCatGenero { get; set; }
+        public int FKComCatGenero { get; set; }         [ForeignKey("FKComCatGenero")]         public ComCatGenero ComCatGenero { get; set; }
     }
 }
